@@ -140,6 +140,10 @@ var DpeGes = function () {
         if (o.opacity) {
           elem.setAttribute("opacity", o.opacity);
         }
+				//CHANGED: cedric@anamorphik.fr — www.anamorphik.com - added class support
+        if (o.class) {
+          elem.classList.add(o.class);
+        }
       };
 
       self.getPath = function (path, options) {
@@ -264,7 +268,9 @@ var DpeGes = function () {
                 'stroke': '#5b5b5b',
                 'strokeWidth': 1,
                 'fill': "#ffffff",
-                'fillOpacity': 0.8
+                'fillOpacity': 0.8,
+								// CHANGED: cedric@anamorphik.fr
+								'class': 'score-path',
               }));
 
             svg.appendChild(self.getText(
@@ -277,7 +283,9 @@ var DpeGes = function () {
                   'fontSize': blocHeight * 0.9,
                   'fontWeight': 'bold',
                   'fontFamily': "'Arial Narrow', sans-serif",
-                  'textAnchor': 'end'
+                  'textAnchor': 'end',
+									// CHANGED: cedric@anamorphik.fr
+									'class': 'score-text',
                 }
               }
               ));
